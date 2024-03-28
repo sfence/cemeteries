@@ -12,7 +12,7 @@ local place_on = {"default:permafrost_with_stones",
               "default:dirt_with_rainforest_litter"}
 local biomes = {"tundra","taiga","snowy_grassland","grassland","grassland_dunes","coniferous_forest", "deciduous_forest", "savanna","rainforest"}
 
-local base_chance = 0.0001
+local base_fill = tonumber(minetest.settings:get("cemeteries_graves_fill_ration") or "0.0001")
 
 minetest.register_decoration({
   name = "cemeteries:graves_simple",
@@ -22,7 +22,7 @@ minetest.register_decoration({
   place_on = place_on,
   y_min = -2,
   y_max = 80,
-  fill_ratio = base_chance,
+  fill_ratio = base_fill,
   param0 = 0,
   param0_max = 3,
   biomes = biomes,
@@ -35,7 +35,7 @@ minetest.register_decoration({
   place_on = place_on,
   y_min = -2,
   y_max = 80,
-  fill_ratio = base_chance*0.5,
+  fill_ratio = base_fill*0.5,
   param0 = 0,
   param0_max = 3,
   biomes = biomes,
@@ -48,7 +48,7 @@ minetest.register_decoration({
   place_on = place_on,
   y_min = -2,
   y_max = 80,
-  fill_ratio = base_chance*0.1,
+  fill_ratio = base_fill*0.1,
   param0 = 0,
   param0_max = 3,
   biomes = biomes,

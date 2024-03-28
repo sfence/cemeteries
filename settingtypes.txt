@@ -1,0 +1,6 @@
+
+# Chance of spawning grave. Bigger number means more graves.
+# Be really carefull with changing this value, it is easy to get your world fill with graves.
+cemeteries_graves_fill_ration (Chance of spawning grave) float 0 1 0.0001
+
+
