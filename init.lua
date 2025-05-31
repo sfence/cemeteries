@@ -181,7 +181,7 @@ local function generate_cemetery(minp, maxp, pos, graves, param2)
 	
 	local found = core.find_nodes_in_area_under_air(minp, maxp, place_on_clever)
 
-	print("Cemetery wall "..have_wall.." with "..graves.." graves from "..core.pos_to_string(minp).." to "..core.pos_to_string(maxp))
+	--print("Cemetery wall "..have_wall.." with "..graves.." graves from "..core.pos_to_string(minp).." to "..core.pos_to_string(maxp))
 
 	local graves_random = PcgRandom(core.get_perlin(cemetery_noise_named_graves):get_2d(pos))
 	local second_name = name_generator.generate("human surname")
